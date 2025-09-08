@@ -1,0 +1,24 @@
+{
+  "name": "tarea3_aplicaciondecv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "Sass src/styles:dist/styles",
+    "styles:dev": "Sass src/styles:dist/styles --watch",
+    "start": "node src/server.js",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.92.1",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

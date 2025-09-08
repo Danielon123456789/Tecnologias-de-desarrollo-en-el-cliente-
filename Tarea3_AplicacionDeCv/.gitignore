@@ -1,0 +1,7 @@
+# Dependencias
+node_modules/
+
+# Carpeta de distribución
+dist/
+
+
