@@ -1,0 +1,18 @@
+<div class="right-panel">
+  <h3>Pelicula seleccionada:</h3>
+  <div *ngIf="selectedItem; else noSelection">
+    <h3 class="title">{{ selectedItem.title }}</h3>
+
+    <p *ngIf="selectedItem.author"><b>Author:</b> {{ selectedItem.author }}</p>
+    <p *ngIf="selectedItem.director"><b>Director:</b> {{ selectedItem.director }}</p>
+    <p *ngIf="selectedItem.artist"><b>Artist:</b> {{ selectedItem.artist }}</p>
+    <p><b>Year:</b> {{ selectedItem.year }}</p>
+    <p><b>Genre:</b> {{ selectedItem.genre }}</p>
+
+    <button (click)="clear()">Limpiar</button>
+  </div>
+
+  <ng-template #noSelection>
+    <p class="placeholder">No hay ningún elemento seleccionado</p>
+  </ng-template>
+</div>

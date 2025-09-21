@@ -1,0 +1,28 @@
+.right-panel {
+    flex: 1;
+    min-width: 260px;
+
+
+    .title {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+
+    .placeholder {
+      color: #777;
+    }
+
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

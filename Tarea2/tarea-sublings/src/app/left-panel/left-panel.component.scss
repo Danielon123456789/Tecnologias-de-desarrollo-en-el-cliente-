@@ -1,0 +1,42 @@
+.left-panel {
+
+  width: 800px;
+
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+      cursor: pointer;
+      outline: none;
+
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+
+      &:hover {
+        background: #f8f9fa;
+      }
+
+
+      &.selected {
+        background: #dceeff;
+        font-weight: 600;
+      }
+
+
+      &:focus {
+        box-shadow: inset 0 0 0 2px rgba(0, 123, 255, 0.12);
+      }
+    }
+  }
+}
