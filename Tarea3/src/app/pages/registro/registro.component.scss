@@ -1,0 +1,46 @@
+.registro-container {
+  max-width: 480px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+
+  input {
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .checkbox {
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    gap: 0.5rem;
+  }
+
+  button {
+    background-color: #0078d4;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .error small {
+    color: #c62828;
+    font-size: 0.8rem;
+  }
+}

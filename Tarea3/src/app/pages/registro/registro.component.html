@@ -1,0 +1,67 @@
+<div class="registro-container">
+  <h1>Registro de usuario</h1>
+
+  <form [formGroup]="form" (ngSubmit)="doOnSubmit()">
+
+    <!-- Nombre -->
+    <label>
+      Nombre:
+      <input type="text" formControlName="name" placeholder="Tu nombre completo" />
+    </label>
+    <div *ngIf="isInvalid('name')" class="error">
+      <small *ngIf="form.get('name')?.hasError('required')">El nombre es obligatorio.</small>
+      <small *ngIf="form.get('name')?.hasError('minlength')">Mínimo 2 caracteres.</small>
+    </div>
+
+    <!-- Correo -->
+    <label>
+      Correo electrónico:
+      <input type="email" formControlName="email" placeholder="correo@ejemplo.com" />
+    </label>
+    <div *ngIf="isInvalid('email')" class="error">
+      <small *ngIf="form.get('email')?.hasError('required')">El correo es obligatorio.</small>
+      <small *ngIf="form.get('email')?.hasError('email')">Formato de correo no válido.</small>
+    </div>
+
+    <!-- Edad -->
+    <label>
+      Edad:
+      <input type="number" formControlName="age" placeholder="18" />
+    </label>
+    <div *ngIf="isInvalid('age')" class="error">
+      <small *ngIf="form.get('age')?.hasError('required')">La edad es obligatoria.</small>
+      <small *ngIf="form.get('age')?.hasError('min')">Debes ser mayor de edad (18+).</small>
+    </div>
+
+    <!-- Contraseña -->
+    <label>
+      Contraseña:
+      <input type="password" formControlName="password" placeholder="Mínimo 8 caracteres" />
+    </label>
+    <div *ngIf="isInvalid('password')" class="error">
+      <small *ngIf="form.get('password')?.hasError('required')">La contraseña es obligatoria.</small>
+      <small *ngIf="form.get('password')?.hasError('minlength')">Mínimo 8 caracteres.</small>
+    </div>
+
+    <!-- Confirmar contraseña -->
+    <label>
+      Confirmar contraseña:
+      <input type="password" formControlName="confirmPassword" placeholder="Repite la contraseña" />
+    </label>
+    <div *ngIf="isInvalid('confirmPassword')" class="error">
+      <small *ngIf="form.get('confirmPassword')?.hasError('required')">Confirma tu contraseña.</small>
+      <small *ngIf="form.get('confirmPassword')?.hasError('notMatching')">Las contraseñas no coinciden.</small>
+    </div>
+
+    <!-- Aceptar términos -->
+    <label class="checkbox">
+      <input type="checkbox" formControlName="terms" />
+      Acepto los términos y condiciones
+    </label>
+    <div *ngIf="isInvalid('terms')" class="error">
+      <small>Debes aceptar los términos.</small>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Registrar</button>
+  </form>
+</div>
